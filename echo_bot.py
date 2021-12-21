@@ -1,6 +1,6 @@
 import telebot
 
-# TODO: Удалить токен
+# TODO: Удалить токен demo
 bot = telebot.TeleBot("5033258071:AAEzrJiI4HAPhB9XQaYD28AIdTsheanTWLc")
 
 @bot.message_handler(commands=['start', 'help'])
