@@ -1,1 +1,1 @@
-pyTelegramBotAPI>=4.2.2
+pyTelegramBotAPI==2.2.3
