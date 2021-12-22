@@ -4,8 +4,6 @@ import os
 
 load_dotenv()
 
-# Trying to commit linter error
-
 mToken = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(mToken)
 
