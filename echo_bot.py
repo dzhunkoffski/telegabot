@@ -4,7 +4,8 @@ import os
 
 load_dotenv()
 
-# TODO: Удалить токен demo
+# Trying to commit linter error
+
 mToken = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(mToken)
 
