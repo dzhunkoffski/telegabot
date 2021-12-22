@@ -1,7 +1,12 @@
 import telebot
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # TODO: Удалить токен demo
-bot = telebot.TeleBot("5033258071:AAEzrJiI4HAPhB9XQaYD28AIdTsheanTWLc")
+mToken = os.getenv("BOT_TOKEN")
+bot = telebot.TeleBot(mToken)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
