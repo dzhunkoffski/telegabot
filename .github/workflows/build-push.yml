@@ -3,10 +3,9 @@ name: DockerPusher
 on:
   release:
     types: [published, created]
-  
-  workflow_run:
-    workflows: ["Pylint"]
-    types: [completed]
+    workflow_run:
+      workflows: ["Pylint"]
+      types: [completed]
 
 jobs:
   on-success:
