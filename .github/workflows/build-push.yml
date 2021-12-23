@@ -4,6 +4,10 @@ on:
   release:
     types: [published, created]
 
+  workflow_run:
+      workflows: ["Pylint"]
+      types: [completed]
+
 jobs:
   on-success:
     runs-on: ubuntu-latest
