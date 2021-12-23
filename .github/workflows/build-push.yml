@@ -3,18 +3,21 @@ name: DockerPusher
 on:
   release:
     types: [published, created]
-
-  workflow_run:
-      workflows: ["Pylint"]
-      types: [completed]
-
+    
 jobs:
   on-success:
     runs-on: ubuntu-latest
-    if: ${{github.event.workflow_run.conclusion == 'success'}}
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+        
+      - name: Wait for other checks to succeed
+        uses: lewagon/wait-on-check-action@v1.0.0
+        with:
+          ref: ${{ github.ref }}
+          running-workflow-name: 'Pylint'
+          repo-token: ${{ secrets.WORKFLOW_TOKEN }}
+          wait-interval: 10
         
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
