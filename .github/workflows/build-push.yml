@@ -1,6 +1,7 @@
 name: DockerPusher
 
 on:
+  create:
   release:
     types: [published, created]
     
