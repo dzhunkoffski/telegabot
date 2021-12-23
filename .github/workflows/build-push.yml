@@ -16,7 +16,7 @@ jobs:
         uses: lewagon/wait-on-check-action@v1.0.0
         with:
           ref: ${{ github.ref }}
-          running-workflow-name: 'Pylint'
+          running-workflow-name: 'Publish image to Docker'
           repo-token: ${{ secrets.WORKFLOW_TOKEN }}
           wait-interval: 10
         
