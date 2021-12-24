@@ -1,8 +1,8 @@
 """MODULES"""
 import os
+import random
 import telebot
 from dotenv import load_dotenv
-import random
 
 load_dotenv()
 
