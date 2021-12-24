@@ -8,8 +8,6 @@ load_dotenv()
 mToken = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(mToken)
 
-# Some dummy change to test CD
-
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     """Method"""
