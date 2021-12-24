@@ -22,3 +22,5 @@ def echo_all(message):
         bot.reply_to(message, "Just what do you think you’re doing, Dave?")
     else:
         bot.reply_to(message, "Не понимаю тебя, напиши: 'Хочу мем'")
+
+bot.infinity_polling()
