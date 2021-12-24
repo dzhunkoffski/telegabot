@@ -3,9 +3,7 @@ import os
 import random
 import telebot
 from dotenv import load_dotenv
-
 load_dotenv()
-
 mToken = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(mToken)
 
