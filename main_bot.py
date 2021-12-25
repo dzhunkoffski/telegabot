@@ -21,7 +21,7 @@ def send_help(message):
     bot.reply_to(message, "Просто возьми и напиши 'Хочу мем'")
 
 @bot.message_handler(commands=['version'])
-def send_welcome(message):
+def send_version(message):
     """Method"""
     bot.reply_to(message, VER)
 
