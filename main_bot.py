@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 mToken = os.getenv("BOT_TOKEN")
-MEME_SIZE = 17
-VER = "v3.0.5"
+MEME_SIZE = 18
+VER = "v3.0.6"
 bot = telebot.TeleBot(mToken)
 
 @bot.message_handler(commands=['start'])
