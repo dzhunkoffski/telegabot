@@ -5,6 +5,8 @@ on:
     # Pattern matched against refs/tags
     tags:        
       - '*'
+  release:
+    types: [published]
     
 jobs:
   on-success:
