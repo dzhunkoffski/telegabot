@@ -23,7 +23,7 @@ def send_help(message):
 @bot.message_handler(commands=['version'])
 def send_welcome(message):
     """Method"""
-    bot.reply_to(message, "Привет, чтобы получить мем от бота наипши: 'Хочу мем'")
+    bot.reply_to(message, VER)
 
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
