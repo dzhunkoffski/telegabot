@@ -2,7 +2,7 @@
 
 FROM python:3.8-slim-buster
 
-WORKDIR /main_bot
+WORKDIR /telegabot
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
