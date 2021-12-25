@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 mToken = os.getenv("BOT_TOKEN")
 MEME_SIZE = 17
+VER = "v3.0.1"
 bot = telebot.TeleBot(mToken)
 
 @bot.message_handler(commands=['start'])
@@ -14,10 +15,15 @@ def send_welcome(message):
     """Method"""
     bot.reply_to(message, "Привет, чтобы получить мем от бота наипши: 'Хочу мем'")
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['help'])
 def send_help(message):
     """Method"""
     bot.reply_to(message, "Просто возьми и напиши 'Хочу мем'")
+
+@bot.message_handler(commands=['version'])
+def send_welcome(message):
+    """Method"""
+    bot.reply_to(message, "Привет, чтобы получить мем от бота наипши: 'Хочу мем'")
 
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
@@ -25,7 +31,7 @@ def echo_all(message):
     if message.text == "Хочу мем":
 
         # Добавить разнообразных фразочек
-        bot.reply_to(message, "Выбираю мем для тебя...")
+        bot.reply_to(message, "Выбираю мем для тебя....")
         mem_id = random.randint(1, MEME_SIZE)
         with open('img/meme'+str(mem_id)+'.jpeg', 'rb') as photo:
             bot.send_photo(message.chat.id, photo)
