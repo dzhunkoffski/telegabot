@@ -2,7 +2,7 @@ version: '3'
 
 services:
   telegabot:
-    image: telegabot
+    image: dzhoonk/loltelebot
     environment:
       BOT_TOKEN: "${BOT_TOKEN}"
 
