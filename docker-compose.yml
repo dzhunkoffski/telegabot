@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  telegabot:
+    image: telegabot
+    environment:
+      BOT_TOKEN: "${BOT_TOKEN}"
+
