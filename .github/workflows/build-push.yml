@@ -5,9 +5,7 @@ on:
     # Pattern matched against refs/tags
     tags:        
       - '*'
-  release:
-    types: [published, created, released]
-    
+
 jobs:
   on-success:
     name: Publish image to Docker

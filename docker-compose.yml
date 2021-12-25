@@ -3,6 +3,15 @@ version: '3'
 services:
   telegabot:
     image: dzhoonk/loltelebot
+    labels:
+      - "com.centurylinklabs.wathctowerscope=myscope"
     environment:
       BOT_TOKEN: "${BOT_TOKEN}"
 
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 10 --scope myscope
+    labels:
+      - "com.centurylinklabs.wathctowerscope=myscope"
